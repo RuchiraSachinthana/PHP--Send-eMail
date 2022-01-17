@@ -5,7 +5,19 @@ if(isset($_POST['submit']) ) {
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
+
+    $to = 'ruchirasweb@gmail.com';
+    $mail_subject = 'Message from Website';
+    $email_body = "Message from Contact Us page of the Website: <br>";
+    $email_body .= "<b>From:</b> {$fullname} <br>";
+    $email_body .= "<b>Subject:</b> {$subject} <br>";
+    $email_body .= "<b>Message:</b> {$message} <br>";
+
+
+    mail()
 }
+
+
 
 ?>
 <!doctype html>
